@@ -1,0 +1,137 @@
+/***************** IMPORTS *******************/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/***************** VARIABLES *******************/
+:root {
+	/* Colors */
+	--black-color-00: #000;
+	--gray-color-00: #555;
+	--primary-color: #2f2bad;
+	--secondary-color: #ad2bad;
+	--button-hover-color: #e42692;
+	--button-color: #f71568;
+	--white-color-00: #fff;
+	--white-color-10: #fafdfe;
+
+	/* Font Family */
+	--main-ff: 'Bebas Neue', serif;
+	--text-ff: 'Poppins', serif;
+
+	/* Font Weight */
+	--light-fw: 300;
+	--normal-fw: 400;
+	--medium-fw: 500;
+	--semibold-fw: 600;
+	--bold-fw: 700;
+
+	/* Font Size */
+	--sm-fs: 0.875rem;
+	--base-fs: 0.975rem;
+	--lg-fs: 1.125rem;
+	--xl-fs: 1.5rem;
+	--xxl-fs: 2.75rem;
+
+	/* Border Radius */
+	--light-radius: 0.325rem;
+	--normal-radius: 0.575rem;
+	--medium-radius: 0.735rem;
+	--circle-radius: 50%;
+
+	/* Width */
+	--container-mw: 1280px;
+
+	/* Padding */
+	--container-pi: 0.785rem;
+	--section-pb: 3.75rem;
+
+	/* Transitions */
+	--link-tr: 0.35s ease-in-out;
+	--button-tr: 0.436s ease-in-out;
+	--image-tr: 0.567s ease-out;
+}
+
+/***************** BASE *******************/
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: var(--white-color-10);
+	font-family: var(--text-ff);
+	font-size: var(--base-fs);
+	font-weight: var(--normal-fw);
+	color: var(--black-color-00);
+}
+
+:is(h1, h2, h3, h4, h5, h6) {
+	font-family: var(--main-ff);
+	font-weight: var(--normal-fw);
+}
+
+:is(h1, h2) {
+	font-size: var(--xxl-fs);
+}
+
+:is(h3, h4) {
+	font-size: var(--xl-fs);
+}
+
+:is(h5, h6) {
+	font-size: var(--lg-fs);
+}
+
+button,
+input,
+textarea,
+select {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: var(--gray-color-00);
+	font-weight: var(--light-fw);
+	font-size: var(--base-fs);
+}
+
+button,
+select {
+	cursor: pointer;
+	transition: var(--button-tr);
+}
+
+a {
+	color: inherit;
+	transition: var(--link-tr);
+}
+
+ul {
+	display: flex;
+	list-style: none;
+}
+
+/***************** REUSABLE *******************/
+.container {
+	max-width: var(--container-mw);
+	padding-inline: var(--container-pi);
+}
+
+.section {
+	padding-block: var(--section-pb);
+}
+
+.flex-center {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
