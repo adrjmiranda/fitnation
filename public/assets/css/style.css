@@ -113,6 +113,7 @@ select {
 a {
 	color: inherit;
 	transition: var(--link-tr);
+	text-decoration: none;
 }
 
 ul {
@@ -120,10 +121,16 @@ ul {
 	list-style: none;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+}
+
 /***************** REUSABLE *******************/
 .container {
 	max-width: var(--container-mw);
 	padding-inline: var(--container-pi);
+	margin: 0 auto;
 }
 
 .section {
