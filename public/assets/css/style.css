@@ -14,6 +14,8 @@
 	--white-color-00: #fff;
 	--white-color-10: #fafdfe;
 
+	--film-bc: rgba(0, 0, 0, 0.45);
+
 	/* Font Family */
 	--main-ff: 'Bebas Neue', serif;
 	--text-ff: 'Poppins', serif;
@@ -49,6 +51,9 @@
 	--link-tr: 0.35s ease-in-out;
 	--button-tr: 0.436s ease-in-out;
 	--image-tr: 0.567s ease-out;
+
+	/* Time */
+	--banner-animation-time: 5s;
 }
 
 /***************** BASE *******************/
@@ -166,6 +171,15 @@ img {
 	display: none;
 }
 
+.btn {
+	width: fit-content;
+	padding: 0.65rem 1.95rem;
+	border-radius: var(--light-radius);
+	text-transform: capitalize;
+	font-size: var(--sm-fs);
+	font-weight: var(--medium-fw);
+}
+
 /***************** HOME *******************/
 /* TODO: Create HOME style */
 /***************** NAVBAR *******************/
@@ -174,6 +188,7 @@ img {
 	position: absolute;
 	min-height: 80px;
 	width: 100%;
+	z-index: 100;
 }
 
 .navbar-content {
@@ -190,7 +205,7 @@ img {
 }
 
 .navbar-content.change-color {
-	background-color: rgba(0, 0, 0, 0.85);
+	background-color: var(--film-bc);
 }
 
 .navbar-logo .logo-text {
@@ -228,10 +243,128 @@ img {
 .navbar-link:hover {
 	color: var(--white-color-00);
 }
-
 /************** End of NAVBAR ***************/
+
 /***************** BANNER *******************/
-/* TODO: Create BANNER style */
+#banner {
+	height: calc(100vh);
+	width: 100vw;
+	position: relative;
+	background-color: var(--black-color-00);
+}
+
+.banner-content,
+.banner-item,
+.banner-item::after {
+	height: 100%;
+	width: 100%;
+}
+
+.banner-item {
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
+}
+
+.banner-item::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--film-bc);
+	z-index: 10;
+}
+
+.banner-item.fade-banner {
+	animation: var(--banner-animation-time) ease-in-out 1 normal forwards
+		fade__banner;
+}
+
+.banner-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	z-index: 0;
+}
+
+.banner-text {
+	position: absolute;
+	z-index: 20;
+	transform: translate(-50%, -50%);
+	bottom: 3.75rem;
+	opacity: 1;
+	left: 50%;
+	background-color: var(--film-bc);
+	padding: 2.35rem 3.75rem;
+	padding: 0.75rem 0.95rem;
+	max-width: fit-content;
+	border-radius: var(--light-radius);
+	display: flex;
+	flex-direction: column;
+	gap: 0.65rem;
+}
+
+.banner-text.fade-banner-text {
+	animation: 2s ease-in-out 1 normal forwards fade__banner__text;
+}
+
+.banner-title,
+.banner-subtitle {
+	color: var(--white-color-00);
+}
+
+.banner-title {
+	font-size: var(--xxl-fs);
+}
+
+.banner-subtitle {
+	font-size: var(--lg-fs);
+}
+
+.banner-btn {
+	background-color: var(--white-color-10);
+	opacity: 0.8;
+}
+
+.banner-btn:hover {
+	background-color: var(--white-color-00);
+	opacity: 1;
+}
+
+@keyframes fade__banner {
+	0% {
+		opacity: 0;
+	}
+
+	15% {
+		opacity: 1;
+	}
+
+	75% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes fade__banner__text {
+	0% {
+		opacity: 0;
+		bottom: -2.25rem;
+	}
+
+	100% {
+		bottom: 3.75rem;
+		opacity: 1;
+	}
+}
 /************** End of BANNER ***************/
 /************** End of HOME ***************/
 
