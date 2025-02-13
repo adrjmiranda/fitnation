@@ -143,10 +143,92 @@ img {
 	justify-content: center;
 }
 
+.logo {
+	display: flex;
+	align-items: center;
+}
+
+.logo-image {
+	height: 40px;
+	margin-right: 0.35rem;
+}
+
+.logo-text {
+	font-family: var(--main-ff);
+	font-size: var(--lg-fs);
+}
+
+*.show {
+	display: flex;
+}
+
+*.hidden {
+	display: none;
+}
+
 /***************** HOME *******************/
 /* TODO: Create HOME style */
 /***************** NAVBAR *******************/
-/* TODO: Create NAVBAR style */
+#navbar {
+	background-color: transparent;
+	position: absolute;
+	min-height: 80px;
+	width: 100%;
+}
+
+.navbar-content {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	flex-wrap: wrap;
+	padding-block: 0.55rem;
+	margin-top: 0.65rem;
+
+	border-radius: var(--light-radius);
+	transition: background-color 0.5s ease;
+}
+
+.navbar-content.change-color {
+	background-color: rgba(0, 0, 0, 0.85);
+}
+
+.navbar-logo .logo-text {
+	color: var(--white-color-00);
+}
+
+#toggle-menu {
+	color: var(--white-color-10);
+	font-size: var(--xl-fs);
+}
+
+#toggle-menu i {
+	pointer-events: none;
+}
+
+#toggle-menu:hover {
+	color: var(--white-color-00);
+	transform: scale(1.15);
+}
+
+.navbar-menu {
+	gap: 1.25rem;
+	flex: 100%;
+	align-items: flex-end;
+	flex-direction: column;
+	margin-top: 20px;
+}
+
+.navbar-link {
+	color: var(--white-color-10);
+	font-weight: var(--medium-fw);
+	font-size: var(--base-fs);
+}
+
+.navbar-link:hover {
+	color: var(--white-color-00);
+}
+
 /************** End of NAVBAR ***************/
 /***************** BANNER *******************/
 /* TODO: Create BANNER style */

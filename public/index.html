@@ -44,15 +44,21 @@
 			<nav id="navbar">
 				<div class="navbar-content container">
 					<a href="#home" class="logo navbar-logo">
-						<img src="assets/img/logos/white.png" alt="Logo" loading="eager" />
-						<span>FitNation</span>
+						<img
+							src="assets/img/logos/white.png"
+							alt="Logo"
+							loading="eager"
+							class="logo-image"
+						/>
+						<span class="logo-text">FitNation</span>
 					</a>
 
 					<button type="button" id="toggle-menu">
 						<i class="ri-menu-line"></i>
+						<i class="ri-close-large-fill hidden"></i>
 					</button>
 
-					<ul class="navbar-menu">
+					<ul class="navbar-menu hidden">
 						<li class="navbar-item">
 							<a href="#home" class="navbar-link active">Home</a>
 						</li>
@@ -83,7 +89,7 @@
 
 			<!--==================== BANNER ====================-->
 			<div id="banner">
-				<div class="banner-content container">
+				<div class="banner-content">
 					<div class="banner-items">
 						<div class="banner-item">
 							<img
@@ -91,7 +97,7 @@
 								alt="Dumbbells"
 								loading="eager"
 							/>
-							<div class="banner-text">
+							<div class="banner-text container">
 								<h2 class="bannter-title">
 									Transform Your Body, Transform Your Life
 								</h2>
@@ -109,7 +115,7 @@
 								alt="Abdominal"
 								loading="eager"
 							/>
-							<div class="banner-text">
+							<div class="banner-text container">
 								<h2 class="bannter-title">
 									Visible Results. Exceptional Performance
 								</h2>
@@ -127,7 +133,7 @@
 								alt="Legs"
 								loading="eager"
 							/>
-							<div class="banner-text">
+							<div class="banner-text container">
 								<h2 class="bannter-title">Together Towards Your Best</h2>
 								<h3 class="banner-subtitle">
 									Achieve more strength, energy and health with our ongoing
@@ -685,9 +691,14 @@
 		<footer id="footer">
 			<div class="footer-columns container">
 				<div class="footer-column">
-					<a href="#home" class="logo navbar-logo">
-						<img src="assets/img/logos/black.png" alt="Logo" loading="lazy" />
-						<span>FitNation</span>
+					<a href="#home" class="logo footer-logo">
+						<img
+							src="assets/img/logos/black.png"
+							alt="Logo"
+							loading="lazy"
+							class="logo-image"
+						/>
+						<span class="logo-text">FitNation</span>
 					</a>
 					<p class="footer-description">
 						Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla,
