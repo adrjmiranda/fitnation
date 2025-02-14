@@ -96,3 +96,83 @@ const bannerInterval = setInterval(() => {
 window.addEventListener('beforeunload', () => {
 	clearInterval(bannerInterval);
 });
+
+/**
+ * Testimonials Animation and Align Configuration
+ */
+const testimonialsBox = document.querySelector(
+	'.testimonial-items'
+) as HTMLDivElement;
+let testimonialItems = document.querySelectorAll(
+	'.testimonial-item'
+) as NodeListOf<HTMLDivElement>;
+const testimonialItemsNumber = testimonialItems.length;
+
+const highlightClass = 'highlight';
+const lessHighlightClass = 'less-highlight';
+const slideTime = 10000;
+
+const updateTestimonialItems = (): void => {
+	testimonialItems = document.querySelectorAll(
+		'.testimonial-item'
+	) as NodeListOf<HTMLDivElement>;
+};
+
+const correctPositioningOfTestimonialCards = (): void => {
+	const middleIndex = Math.floor(testimonialItemsNumber / 2);
+	const testimonialCardWidth = testimonialItems[middleIndex]?.offsetWidth ?? 0;
+
+	if (testimonialItemsNumber % 2 === 0) {
+		testimonialsBox.style.left = `calc(${2 * testimonialCardWidth}px + 100px)`;
+	} else {
+		testimonialsBox.style.left = `calc(${3 * testimonialCardWidth}px - 75px)`;
+	}
+};
+
+const runTestimonialSlides = (): void => {
+	putTheFirstAtTheEnd();
+	updateTestimonialItems();
+	removeHighlightClasses();
+
+	const middleIndex = Math.floor(testimonialItemsNumber / 2);
+	const prevIndex = middleIndex - 1;
+	const nextIndex = middleIndex + 1;
+
+	if (testimonialItems[prevIndex])
+		testimonialItems[prevIndex].classList.add(lessHighlightClass);
+	if (testimonialItems[middleIndex])
+		testimonialItems[middleIndex].classList.add(highlightClass);
+	if (testimonialItems[nextIndex])
+		testimonialItems[nextIndex].classList.add(lessHighlightClass);
+
+	const testimonialCardWidth = testimonialItems[middleIndex]?.offsetWidth ?? 0;
+	testimonialsBox.style.left = `-calc(${testimonialCardWidth}px + 25px)`;
+};
+
+const putTheFirstAtTheEnd = (): void => {
+	const firstTestimonial = testimonialItems[0];
+	testimonialsBox.appendChild(firstTestimonial);
+};
+
+const removeHighlightClasses = (): void => {
+	testimonialItems.forEach((testimonial) => {
+		testimonial.classList.remove(highlightClass, lessHighlightClass);
+	});
+};
+
+const handleResize = (): void => {
+	correctPositioningOfTestimonialCards();
+};
+
+if (testimonialsBox && testimonialItemsNumber > 0) {
+	correctPositioningOfTestimonialCards();
+	runTestimonialSlides();
+
+	const testimonialSlideInterval = setInterval(runTestimonialSlides, slideTime);
+
+	window.addEventListener('beforeunload', () => {
+		clearInterval(testimonialSlideInterval);
+	});
+
+	window.addEventListener('resize', handleResize);
+}
