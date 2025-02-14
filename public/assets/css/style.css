@@ -163,11 +163,12 @@ img {
 .logo-image {
 	height: 40px;
 	margin-right: 0.35rem;
+	margin-bottom: 0.18rem;
 }
 
 .logo-text {
 	font-family: var(--main-ff);
-	font-size: var(--lg-fs);
+	font-size: var(--xl-fs);
 }
 
 *.show {
@@ -402,6 +403,12 @@ img {
 	border-radius: var(--light-radius);
 	padding: 1.55rem 1.35rem;
 	filter: var(--white-ds);
+	cursor: pointer;
+	transition: transform 0.35s ease-in-out;
+}
+
+.about-item:hover {
+	transform: scale(1.015);
 }
 
 .about-image {
@@ -424,6 +431,25 @@ img {
 	display: flex;
 	flex-direction: column;
 	gap: 1.25rem;
+}
+
+.about-title {
+	position: relative;
+}
+
+.about-title::after {
+	content: '';
+	height: 4px;
+	background-color: var(--black-color-00);
+	width: 0;
+	position: absolute;
+	left: 0;
+	bottom: -0.25rem;
+	transition: width 0.36s ease-in-out;
+}
+
+.about-item:hover .about-title::after {
+	width: 100%;
 }
 /************** End of ABOUT ***************/
 
@@ -595,7 +621,7 @@ img {
 }
 
 .testimonial-item.less-highlight {
-	opacity: 0.5;
+	opacity: 0.35;
 }
 
 .testimonial-item.highlight {
