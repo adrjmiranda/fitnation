@@ -484,7 +484,81 @@ img {
 /************** End of FEATURES ***************/
 
 /***************** BENEFITS *******************/
-/* TODO: Create BENEFITS style */
+#benefits {
+	background-image: url('../img/banners/squat.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	position: relative;
+	z-index: 0;
+}
+
+#benefits::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-image: var(--film-lg);
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.banefits-content {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	column-gap: 1.75rem;
+}
+
+.benefits-left,
+.benefits-right,
+.benefits-list,
+.benefit-content {
+	position: relative;
+	display: flex;
+	z-index: 20;
+}
+
+.benefits-left {
+	justify-content: center;
+	filter: var(--white-ds);
+}
+
+.benefits-left img {
+	height: 450px;
+}
+
+.benefit-list {
+	flex-direction: column;
+	gap: 1.75rem;
+}
+
+.benefit-item {
+	display: flex;
+	align-items: flex-start;
+	gap: 1.25rem;
+}
+
+.benefit-icon i {
+	font-size: var(--xxxl-fs);
+	color: var(--primary-color);
+	filter: var(--white-ds);
+}
+
+.benefit-content {
+	flex-direction: column;
+	gap: 0.65rem;
+}
+
+.benefit-name {
+	font-size: var(--xxl-fs);
+}
+
+.benefit-description {
+	font-size: var(--base-fs);
+	font-weight: var(--light-fw);
+}
 /************** End of BENEFITS ***************/
 
 /***************** TESTIMONIALS *******************/
