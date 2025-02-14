@@ -810,6 +810,12 @@ img {
 	}
 	/************** End of BANNER ***************/
 	/************** End of HOME ***************/
+
+	/***************** FEATURES *******************/
+	.features-items {
+		grid-template-columns: repeat(3, 1fr);
+	}
+	/************** End of FEATURES ***************/
 }
 
 @media screen and (max-width: 1024px) {
@@ -828,6 +834,14 @@ img {
 	/************** End of ABOUT ***************/
 }
 
+@media screen and (max-width: 990px) {
+	/***************** FEATURES *******************/
+	.features-items {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	/************** End of FEATURES ***************/
+}
+
 @media screen and (max-width: 768px) {
 	/***************** HOME *******************/
 	/***************** BANNER *******************/
@@ -844,6 +858,12 @@ img {
 		grid-template-columns: 100%;
 	}
 	/************** End of ABOUT ***************/
+
+	/***************** FEATURES *******************/
+	.features-items {
+		grid-template-columns: 100%;
+	}
+	/************** End of FEATURES ***************/
 }
 
 @media screen and (max-width: 640px) {
