@@ -320,6 +320,7 @@ img {
 	display: flex;
 	flex-direction: column;
 	gap: 0.65rem;
+	max-width: 675px;
 }
 
 .banner-text.fade-banner-text {
@@ -339,6 +340,8 @@ img {
 
 .banner-subtitle {
 	font-size: var(--lg-fs);
+	text-transform: uppercase;
+	font-weight: var(--medium-fw);
 }
 
 .banner-btn {
@@ -346,7 +349,6 @@ img {
 	opacity: 0.65;
 	width: 100%;
 	text-align: center;
-	margin-top: 2.75rem;
 }
 
 .banner-btn:hover {
