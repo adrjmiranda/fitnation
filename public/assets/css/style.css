@@ -719,5 +719,17 @@ img {
 /************** End of FOOTER ***************/
 
 /***************** CREDIT AREA *******************/
-/* TODO: Create CREDIT AREA style */
+#credit-area {
+	padding: 0.55rem 0;
+}
+
+.credit {
+	font-size: var(--sm-fs);
+}
+
+.credit span,
+.credit a {
+	color: var(--secondary-color);
+	font-weight: var(--bold-fw);
+}
 /************** End of CREDIT AREA ***************/
