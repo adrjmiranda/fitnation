@@ -57,6 +57,7 @@
 
 	/* Time */
 	--banner-animation-time: 5s;
+	--banner-text-animation-time: 2s;
 
 	/* Drop Shadow */
 	--white-ds: drop-shadow(1px 1px 25px rgba(255, 255, 255, 0.09));
@@ -322,7 +323,8 @@ img {
 }
 
 .banner-text.fade-banner-text {
-	animation: 2s ease-in-out 1 normal forwards fade__banner__text;
+	animation: var(--banner-text-animation-time) ease-in-out 1 normal forwards
+		fade__banner__text;
 }
 
 .banner-title,
