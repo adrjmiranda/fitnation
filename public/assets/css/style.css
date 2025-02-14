@@ -69,11 +69,11 @@ body {
 }
 
 body {
-	background-color: var(--white-color-10);
+	background-color: var(--black-color-00);
+	color: var(--white-color-10);
 	font-family: var(--text-ff);
 	font-size: var(--base-fs);
 	font-weight: var(--normal-fw);
-	color: var(--black-color-00);
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
@@ -116,9 +116,9 @@ select {
 }
 
 a {
-	color: inherit;
 	transition: var(--link-tr);
 	text-decoration: none;
+	color: var(--black-color-00);
 }
 
 ul {
@@ -249,7 +249,6 @@ img {
 	height: calc(100vh);
 	width: 100vw;
 	position: relative;
-	background-color: var(--black-color-00);
 }
 
 .banner-content,
@@ -315,6 +314,7 @@ img {
 .banner-title,
 .banner-subtitle {
 	color: var(--white-color-00);
+	text-align: center;
 }
 
 .banner-title {
@@ -327,7 +327,10 @@ img {
 
 .banner-btn {
 	background-color: var(--white-color-10);
-	opacity: 0.8;
+	opacity: 0.65;
+	width: 100%;
+	text-align: center;
+	margin-top: 2.75rem;
 }
 
 .banner-btn:hover {
