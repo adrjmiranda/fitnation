@@ -311,7 +311,8 @@ img {
 	position: absolute;
 	z-index: 20;
 	transform: translate(-50%, -50%);
-	bottom: 3.75rem;
+	--final-bottom-position: 3.75rem;
+	bottom: var(--final-bottom-position);
 	opacity: 1;
 	left: 50%;
 	background-image: var(--film-lg);
@@ -383,7 +384,7 @@ img {
 	}
 
 	100% {
-		bottom: 3.75rem;
+		bottom: var(--final-bottom-position);
 		opacity: 1;
 	}
 }
@@ -619,6 +620,7 @@ img {
 	background-color: var(--black-color-10);
 	padding: 1.15rem 0.85rem 1.15rem 50px;
 	opacity: 0;
+	border-radius: var(--light-radius);
 }
 
 .testimonial-item.less-highlight {
@@ -791,3 +793,70 @@ img {
 	font-weight: var(--bold-fw);
 }
 /************** End of CREDIT AREA ***************/
+
+/***************** Responsiveness *******************/
+@media screen and (max-width: 1280px) {
+	/***************** HOME *******************/
+	/***************** NAVBAR *******************/
+	.navbar-content {
+		margin-inline: var(--container-pi);
+	}
+	/************** End of NAVBAR ***************/
+
+	/***************** BANNER *******************/
+	.banner-text {
+		max-width: unset;
+		width: 60%;
+	}
+	/************** End of BANNER ***************/
+	/************** End of HOME ***************/
+}
+
+@media screen and (max-width: 1024px) {
+	/***************** HOME *******************/
+	/***************** BANNER *******************/
+	.banner-text {
+		width: 70%;
+	}
+	/************** End of BANNER ***************/
+	/************** End of HOME ***************/
+}
+
+@media screen and (max-width: 768px) {
+	/***************** HOME *******************/
+	/***************** BANNER *******************/
+	.banner-text {
+		width: 80%;
+	}
+	/************** End of BANNER ***************/
+	/************** End of HOME ***************/
+}
+
+@media screen and (max-width: 640px) {
+	/***************** BANNER *******************/
+	.banner-text {
+		width: 90%;
+	}
+	/************** End of BANNER ***************/
+}
+
+@media screen and (max-width: 576px) {
+	/***************** HOME *******************/
+	/***************** BANNER *******************/
+	.banner-text {
+		width: calc(100% - 2 * var(--container-pi));
+		margin-left: calc(- var(--container-pi));
+	}
+	/************** End of BANNER ***************/
+	/************** End of HOME ***************/
+}
+
+@media screen and (max-width: 370px) {
+	/***************** HOME *******************/
+	/***************** BANNER *******************/
+	.banner-text {
+		--final-bottom-position: 0.75rem;
+	}
+	/************** End of BANNER ***************/
+	/************** End of HOME ***************/
+}
