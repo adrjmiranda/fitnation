@@ -6,13 +6,14 @@
 :root {
 	/* Colors */
 	--black-color-00: #000;
-	--gray-color-00: #555;
+	--black-color-10: #111010;
+	--gray-color-30: #999;
 	--primary-color: #2f2bad;
 	--secondary-color: #ad2bad;
 	--button-hover-color: #e42692;
 	--button-color: #f71568;
 	--white-color-00: #fff;
-	--white-color-10: #fafdfe;
+	--white-color-10: #eaeaea;
 
 	/* Linear Gradient */
 	--film-lg: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.45));
@@ -33,7 +34,8 @@
 	--base-fs: 0.975rem;
 	--lg-fs: 1.125rem;
 	--xl-fs: 1.5rem;
-	--xxl-fs: 2.75rem;
+	--xxl-fs: 1.85rem;
+	--xxxl-fs: 2.75rem;
 
 	/* Border Radius */
 	--light-radius: 0.325rem;
@@ -55,6 +57,9 @@
 
 	/* Time */
 	--banner-animation-time: 5s;
+
+	/* Drop Shadow */
+	--white-ds: drop-shadow(1px 1px 25px rgba(255, 255, 255, 0.09));
 }
 
 /***************** BASE *******************/
@@ -83,7 +88,7 @@ body {
 }
 
 :is(h1, h2) {
-	font-size: var(--xxl-fs);
+	font-size: var(--xxxl-fs);
 }
 
 :is(h3, h4) {
@@ -327,7 +332,7 @@ img {
 }
 
 .banner-title {
-	font-size: var(--xxl-fs);
+	font-size: var(--xxxl-fs);
 }
 
 .banner-subtitle {
@@ -392,7 +397,7 @@ img {
 	position: relative;
 	border-radius: var(--light-radius);
 	padding: 1.55rem 1.35rem;
-	filter: drop-shadow(1px 1px 25px rgba(255, 255, 255, 0.25));
+	filter: var(--white-ds);
 }
 
 .about-image {
@@ -419,7 +424,59 @@ img {
 /************** End of ABOUT ***************/
 
 /***************** FEATURES *******************/
-/* TODO: Create FEATURES style */
+.features-items {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 1.5rem;
+	row-gap: 1.75rem;
+}
+
+.feature-item {
+	background-color: var(--black-color-10);
+	padding: 1.15rem 1.35rem;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	gap: 1.25rem;
+	filter: var(--white-ds);
+	border-top-left-radius: 35px;
+	border-top-right-radius: var(--light-radius);
+	border-bottom-right-radius: 35px;
+	border-bottom-left-radius: var(--light-radius);
+	transition: 0.35s ease-in-out;
+	cursor: pointer;
+}
+
+.feature-item:hover {
+	border-top-right-radius: 35px;
+	border-top-left-radius: var(--light-radius);
+	border-bottom-left-radius: 35px;
+	border-bottom-right-radius: var(--light-radius);
+	transform: scale(1.02);
+}
+
+.feature-icon {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: var(--black-color-10);
+	height: 70px;
+	width: 70px;
+	border-radius: var(--circle-radius);
+	font-size: var(--xxl-fs);
+	color: var(--white-color-00);
+}
+
+.feature-title,
+.feature-description {
+	text-align: justify;
+}
+
+.feature-description {
+	font-weight: var(--light-fw);
+	color: var(--gray-color-30);
+}
 /************** End of FEATURES ***************/
 
 /***************** BENEFITS *******************/
