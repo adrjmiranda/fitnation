@@ -8,6 +8,7 @@
 	--black-color-00: #000;
 	--black-color-10: #111010;
 	--gray-color-30: #999;
+	--gray-color-40: #aaa;
 	--primary-color: #2f2bad;
 	--secondary-color: #ad2bad;
 	--button-hover-color: #e42692;
@@ -671,7 +672,50 @@ img {
 /************** End of CONTACT ***************/
 
 /***************** FOOTER *******************/
-/* TODO: Create FOOTER style */
+#footer {
+	background-color: var(--gray-color-30);
+}
+
+.footer-columns {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	column-gap: 2.75rem;
+}
+
+.footer-column {
+	display: flex;
+	flex-direction: column;
+	gap: 0.65rem;
+}
+
+.footer-logo {
+	margin-top: -0.65rem;
+}
+
+.footer-title {
+	color: var(--secondary-color);
+	font-size: var(--lg-fs);
+}
+
+.footer-description {
+	font-weight: var(--bold-fw);
+	text-align: justify;
+	font-size: var(--base-fs);
+}
+
+.footer-list {
+	flex-direction: column;
+	gap: 0.35rem;
+}
+
+.footer-item i {
+	color: var(--primary-color);
+	font-size: var(--base-fs);
+}
+
+.footer-item span {
+	font-weight: var(--medium-fw);
+}
 /************** End of FOOTER ***************/
 
 /***************** CREDIT AREA *******************/
