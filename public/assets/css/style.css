@@ -14,7 +14,8 @@
 	--white-color-00: #fff;
 	--white-color-10: #fafdfe;
 
-	--film-bc: rgba(0, 0, 0, 0.45);
+	/* Linear Gradient */
+	--film-lg: linear-gradient(to top, rgba(0, 0, 0, 0.95), rgba(0, 0, 0, 0.45));
 
 	/* Font Family */
 	--main-ff: 'Bebas Neue', serif;
@@ -180,6 +181,14 @@ img {
 	font-weight: var(--medium-fw);
 }
 
+.section-header {
+	margin-bottom: 3.75rem;
+}
+
+.section-title {
+	text-align: center;
+}
+
 /***************** HOME *******************/
 /***************** NAVBAR *******************/
 #navbar {
@@ -204,7 +213,7 @@ img {
 }
 
 .navbar-content.change-color {
-	background-color: var(--film-bc);
+	background-image: var(--film-lg);
 }
 
 .navbar-logo .logo-text {
@@ -271,7 +280,7 @@ img {
 	position: absolute;
 	top: 0;
 	left: 0;
-	background-color: var(--film-bc);
+	background-image: var(--film-lg);
 	z-index: 10;
 }
 
@@ -297,7 +306,7 @@ img {
 	bottom: 3.75rem;
 	opacity: 1;
 	left: 50%;
-	background-color: var(--film-bc);
+	background-image: var(--film-lg);
 	padding: 2.35rem 3.75rem;
 	padding: 0.75rem 0.95rem;
 	max-width: fit-content;
@@ -371,7 +380,42 @@ img {
 /************** End of HOME ***************/
 
 /***************** ABOUT *******************/
-/* TODO: Create ABOUT style */
+.about-items {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 1.35rem;
+	row-gap: calc(3.5rem);
+}
+
+.about-item {
+	background-color: var(--white-color-10);
+	position: relative;
+	border-radius: var(--light-radius);
+	padding: 1.55rem 1.35rem;
+	filter: drop-shadow(1px 1px 25px rgba(255, 255, 255, 0.25));
+}
+
+.about-image {
+	position: absolute;
+	height: 90px;
+	width: 90px;
+	background-color: var(--white-color-10);
+	border-radius: var(--circle-radius);
+	right: 2rem;
+	top: -2.5rem;
+	filter: drop-shadow(1px 1px 25px rgba(0, 0, 0, 0.05));
+}
+
+.about-image img {
+	height: 75%;
+}
+
+.about-content {
+	color: var(--black-color-00);
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
 /************** End of ABOUT ***************/
 
 /***************** FEATURES *******************/
