@@ -1092,6 +1092,12 @@ img {
 		left: -140%;
 	}
 	/************** End of TESTIMONIALS ***************/
+
+	/***************** CREDIT AREA *******************/
+	.credit {
+		text-align: center;
+	}
+	/************** End of CREDIT AREA ***************/
 }
 
 @media screen and (max-width: 440px) {
