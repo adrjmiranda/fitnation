@@ -840,6 +840,24 @@ img {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	/************** End of FEATURES ***************/
+
+	/***************** BENEFITS *******************/
+	.benefits-left img {
+		height: 100%;
+	}
+	/************** End of BENEFITS ***************/
+}
+
+@media screen and (max-width: 830px) {
+	/***************** BENEFITS *******************/
+	.banefits-content {
+		grid-template-columns: 100%;
+	}
+
+	.benefits-left img {
+		display: none;
+	}
+	/************** End of BENEFITS ***************/
 }
 
 @media screen and (max-width: 768px) {
@@ -883,6 +901,36 @@ img {
 	}
 	/************** End of BANNER ***************/
 	/************** End of HOME ***************/
+
+	/***************** BENEFITS *******************/
+	.benefit-list {
+		gap: 3.25rem;
+	}
+
+	.benefit-item {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.benefit-icon {
+		width: fit-content;
+		margin: 0 auto;
+	}
+
+	.benefit-icon i {
+		font-size: var(--xxxl-fs);
+		transform: scale(2.25);
+	}
+	/************** End of BENEFITS ***************/
+}
+
+@media screen and (max-width: 400px) {
+	/***************** BENEFITS *******************/
+	#benefits {
+		min-height: 100vh;
+		background-attachment: scroll;
+	}
+	/************** End of BENEFITS ***************/
 }
 
 @media screen and (max-width: 370px) {
