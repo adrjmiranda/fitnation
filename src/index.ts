@@ -176,3 +176,48 @@ if (testimonialsBox && testimonialItemsNumber > 0) {
 
 	window.addEventListener('resize', handleResize);
 }
+
+/**
+ * ScrollReveal Animations
+ */
+
+import ScrollReveal from 'scrollreveal';
+
+const aboutCardsNumber: number =
+	(document.querySelectorAll('.about-item') as NodeListOf<HTMLDivElement>)
+		?.length ?? 0;
+const featureCardsNumber: number =
+	(document.querySelectorAll('.feature-item') as NodeListOf<HTMLDivElement>)
+		?.length ?? 0;
+
+const scrollRevealToCard = (
+	cardsNumber: number,
+	cardSelector: string,
+	delayGain: number
+): void => {
+	for (let index = 0; index < cardsNumber; index++) {
+		ScrollReveal().reveal(`.${cardSelector}:nth-child(${index + 1})`, {
+			reset: true,
+			opacity: 0,
+			duration: 1500,
+			delay: delayGain * (index + 1),
+		});
+	}
+};
+
+scrollRevealToCard(aboutCardsNumber, 'about-item', 50);
+scrollRevealToCard(featureCardsNumber, 'feature-item', 75);
+
+ScrollReveal().reveal('#contact', {
+	reset: false,
+	duration: 2000,
+	delay: 200,
+	origin: 'bottom',
+	distance: '20%',
+	opacity: 0,
+});
+
+const benefitItemsNumber: number =
+	(document.querySelectorAll('.benefit-item') as NodeListOf<HTMLLIElement>)
+		?.length ?? 0;
+scrollRevealToCard(benefitItemsNumber, 'benefit-item', 150);
