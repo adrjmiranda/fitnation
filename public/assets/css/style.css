@@ -816,6 +816,28 @@ img {
 		grid-template-columns: repeat(3, 1fr);
 	}
 	/************** End of FEATURES ***************/
+
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -1.5vw;
+	}
+	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 1090px) {
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -4.5vw;
+	}
+	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 1030px) {
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -6.5vw;
+	}
+	/************** End of TESTIMONIALS ***************/
 }
 
 @media screen and (max-width: 1024px) {
@@ -832,6 +854,13 @@ img {
 		grid-template-columns: repeat(2, 1fr);
 	}
 	/************** End of ABOUT ***************/
+
+	/***************** TESTIMONIALS *******************/
+
+	.testimonial-text {
+		font-size: var(--sm-fs);
+	}
+	/************** End of TESTIMONIALS ***************/
 }
 
 @media screen and (max-width: 990px) {
@@ -846,6 +875,28 @@ img {
 		height: 100%;
 	}
 	/************** End of BENEFITS ***************/
+
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -8.5vw;
+	}
+	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 950px) {
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -10.5vw;
+	}
+	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 890px) {
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -12.5vw;
+	}
+	/************** End of TESTIMONIALS ***************/
 }
 
 @media screen and (max-width: 830px) {
@@ -858,6 +909,20 @@ img {
 		display: none;
 	}
 	/************** End of BENEFITS ***************/
+
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -14.5vw;
+	}
+	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 790px) {
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -16.5vw;
+	}
+	/************** End of TESTIMONIALS ***************/
 }
 
 @media screen and (max-width: 768px) {
@@ -868,6 +933,13 @@ img {
 	}
 	/************** End of BANNER ***************/
 	/************** End of HOME ***************/
+
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		min-width: 60%;
+		left: -90%;
+	}
+	/************** End of TESTIMONIALS ***************/
 }
 
 @media screen and (max-width: 680px) {
@@ -882,6 +954,13 @@ img {
 		grid-template-columns: 100%;
 	}
 	/************** End of FEATURES ***************/
+
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		min-width: 60%;
+		left: -95%;
+	}
+	/************** End of TESTIMONIALS ***************/
 }
 
 @media screen and (max-width: 640px) {
@@ -890,6 +969,13 @@ img {
 		width: 90%;
 	}
 	/************** End of BANNER ***************/
+
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		min-width: 60%;
+		left: -100%;
+	}
+	/************** End of TESTIMONIALS ***************/
 }
 
 @media screen and (max-width: 576px) {
@@ -922,6 +1008,46 @@ img {
 		transform: scale(2.25);
 	}
 	/************** End of BENEFITS ***************/
+
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		min-width: 70%;
+		left: -130%;
+	}
+	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 520px) {
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -135%;
+	}
+	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 480px) {
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -140%;
+	}
+	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 440px) {
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		min-width: 76%;
+		left: -158%;
+	}
+	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 420px) {
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -162%;
+	}
+	/************** End of TESTIMONIALS ***************/
 }
 
 @media screen and (max-width: 400px) {
@@ -931,6 +1057,22 @@ img {
 		background-attachment: scroll;
 	}
 	/************** End of BENEFITS ***************/
+
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -164%;
+	}
+	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 390px) {
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -168%;
+		padding: 0.85rem 0.25rem;
+		padding-left: 50px;
+	}
+	/************** End of TESTIMONIALS ***************/
 }
 
 @media screen and (max-width: 370px) {
@@ -950,4 +1092,18 @@ img {
 		right: 15px;
 	}
 	/************** End of ABOUT ***************/
+
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -173%;
+	}
+	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 360px) {
+	/***************** TESTIMONIALS *******************/
+	.testimonial-item {
+		left: -176%;
+	}
+	/************** End of TESTIMONIALS ***************/
 }
