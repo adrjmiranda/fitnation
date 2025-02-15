@@ -1040,7 +1040,7 @@ img {
 
 	.benefit-icon {
 		width: fit-content;
-		margin: 0 auto;
+		margin: 0 auto 1.25rem;
 	}
 
 	.benefit-icon i {
