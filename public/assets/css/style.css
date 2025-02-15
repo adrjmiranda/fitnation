@@ -942,6 +942,15 @@ img {
 	/************** End of TESTIMONIALS ***************/
 }
 
+@media screen and (max-width: 720px) {
+	/***************** CONTACT *******************/
+	.contact-content {
+		padding: 1.85rem 1.18rem;
+		margin-inline: var(--container-pi);
+	}
+	/************** End of CONTACT ***************/
+}
+
 @media screen and (max-width: 680px) {
 	/***************** ABOUT *******************/
 	.about-items {
@@ -976,6 +985,24 @@ img {
 		left: -100%;
 	}
 	/************** End of TESTIMONIALS ***************/
+}
+
+@media screen and (max-width: 620px) {
+	/***************** CONTACT *******************/
+	.contact-title {
+		font-size: var(--xxl-fs);
+	}
+
+	.contact-subtitle {
+		font-size: var(--base-fs);
+	}
+
+	.contact-form input,
+	.contact-form input::placeholder,
+	.contact-btn {
+		font-size: var(--sm-fs);
+	}
+	/************** End of CONTACT ***************/
 }
 
 @media screen and (max-width: 576px) {
@@ -1015,6 +1042,21 @@ img {
 		left: -130%;
 	}
 	/************** End of TESTIMONIALS ***************/
+
+	/***************** CONTACT *******************/
+	.contact-content,
+	.contact-form {
+		border-radius: var(--light-radius);
+	}
+	/************** End of CONTACT ***************/
+}
+
+@media screen and (max-width: 530px) {
+	/***************** CONTACT *******************/
+	.contact-form input {
+		flex: 50vw;
+	}
+	/************** End of CONTACT ***************/
 }
 
 @media screen and (max-width: 520px) {
@@ -1073,6 +1115,12 @@ img {
 		padding-left: 50px;
 	}
 	/************** End of TESTIMONIALS ***************/
+
+	/***************** CONTACT *******************/
+	.contact-form input {
+		flex: 40vw;
+	}
+	/************** End of CONTACT ***************/
 }
 
 @media screen and (max-width: 370px) {
@@ -1098,6 +1146,29 @@ img {
 		left: -173%;
 	}
 	/************** End of TESTIMONIALS ***************/
+
+	/***************** CONTACT *******************/
+	.contact-form {
+		height: 120px;
+		flex-direction: column;
+		gap: 0.85rem;
+	}
+
+	.contact-form input,
+	.contact-btn {
+		height: 50%;
+		flex-grow: 0;
+	}
+
+	.contact-form input {
+		padding: 0.25rem 0.85rem;
+	}
+
+	.contact-btn {
+		display: block;
+		padding-block: 1rem;
+	}
+	/************** End of CONTACT ***************/
 }
 
 @media screen and (max-width: 360px) {
