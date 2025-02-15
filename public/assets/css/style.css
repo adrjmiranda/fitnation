@@ -82,6 +82,7 @@ body {
 	font-family: var(--text-ff);
 	font-size: var(--base-fs);
 	font-weight: var(--normal-fw);
+	overflow-x: hidden;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
